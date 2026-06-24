@@ -4,10 +4,9 @@ public class Solution {
     public int solution(int n) {
         int answer = 0;
 
-        String strNumber = String.valueOf(n);
-        for(char ch : strNumber.toCharArray()){
-            
-            answer += ch - '0';
+        while(n != 0){
+            answer += n % 10;
+            n = n / 10;
         }
 
         return answer;
