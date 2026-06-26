@@ -1,7 +1,7 @@
+import java.util.Arrays;
 class Solution {
     public long solution(long n) {
-        String str = String.valueOf(n);
-        String[] array = str.split("");
+        String[] array = String.valueOf(n).split("");
         for(int i = 0; i < array.length; i++){
             for(int j = i + 1; j < array.length; j++){
                 if(Integer.valueOf(array[j]) > Integer.valueOf(array[i])){
