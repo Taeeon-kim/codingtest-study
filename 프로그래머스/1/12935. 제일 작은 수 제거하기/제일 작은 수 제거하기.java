@@ -1,27 +1,12 @@
+import java.util.Arrays;
 class Solution {
     public int[] solution(int[] arr) {
         
         if(arr.length -1 == 0 ) return new int[]{-1};
         
-        int min = arr[0];
+        int min = Arrays.stream(arr).min().getAsInt();
         
-        for(int i = 1; i < arr.length; i++){
-            if(arr[i] < min) {
-                min = arr[i];
-              
-            }
-        }
-
-        int[] answer = new int[arr.length - 1];
-        int index = 0;
-        for(int j = 0; j < arr.length; j++){
-            if(arr[j] != min) {
-                answer[index++] =arr[j];
-            }
-        }
-        
-        return answer;
-       
+        return Arrays.stream(arr).filter(num -> num != min).toArray();
         
     }
 }
