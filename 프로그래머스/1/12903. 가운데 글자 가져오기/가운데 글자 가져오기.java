@@ -1,7 +1,7 @@
 class Solution {
     public String solution(String s) {
-        
-        if(s.length() % 2 == 0) return "" + s.charAt(s.length() / 2 - 1) + s.charAt(s.length() / 2);
-        else return "" + s.charAt(s.length() / 2);
+        int mid = s.length() / 2;
+        if(s.length() % 2 == 0) return s.substring(mid - 1, mid + 1);
+        else return s.substring(mid, mid +1);
     }
 }
